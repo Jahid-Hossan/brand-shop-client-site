@@ -16,11 +16,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
             }, {
                 path: '/brand/:name',
                 element: <BrandProducts></BrandProducts>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
             }, {
                 path: '/shop',
                 element: <Shop></Shop>
