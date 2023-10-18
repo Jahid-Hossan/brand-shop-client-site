@@ -2,8 +2,10 @@ import React from 'react';
 import SliderHome from '../../Component/SliderHome/SliderHome';
 import ShopByBrand from '../../Component/ShopByBrand/ShopByBrand';
 import BestSelling from '../../Component/BestSelling/BestSelling';
+import { useParams } from 'react-router-dom';
 
 const Home = () => {
+
     return (
         <div className='container mx-auto'>
             <SliderHome />
