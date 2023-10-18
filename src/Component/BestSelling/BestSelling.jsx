@@ -1,5 +1,7 @@
 import { AiFillStar, AiOutlineShoppingCart } from 'react-icons/ai';
-import { useLoaderData } from 'react-router-dom';
+import { FaEdit } from 'react-icons/fa';
+import { RiDeleteBin2Line } from 'react-icons/ri';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const BestSelling = () => {
     const allProducts = useLoaderData()
@@ -16,6 +18,7 @@ const BestSelling = () => {
                                 <AiOutlineShoppingCart />
                             </button>
                         </figure>
+                        <p className='bg-gray-400 text-sm w-fit rounded-tr-md rounded-bl-md px-2'>{product.category}</p>
                         <div className=" items-center text-left space-y-2">
                             <h2 className="font-semibold text-xl">{product.name}</h2>
                             <p className=''>{product.description}</p>
@@ -29,6 +32,19 @@ const BestSelling = () => {
                             <div className=''>
                                 <p className='flex items-center w-fit justify-end rounded-full my-0 bg-purple-500 text-white px-1 font-bold'>{product.rating}<AiFillStar /></p>
                             </div>
+
+                        </div>
+                        <div>
+                            <button>
+                                <Link >
+                                    <FaEdit />
+                                </Link>
+                            </button>
+                            <button  >
+                                <Link >
+                                    <RiDeleteBin2Line />
+                                </Link>
+                            </button>
                         </div>
                     </div>
                 </div>)

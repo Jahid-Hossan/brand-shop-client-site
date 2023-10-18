@@ -18,8 +18,8 @@ const Header = () => {
             <nav className='flex container mx-auto  px-5 top-0 lg:flex-row justify-between items-center'>
 
 
-                <h2>Shop Name</h2>
-                {/* <img className='h-8 py-2 hidden md:block text-white md:h-16'  alt="" /> */}
+
+                <img className='h-8 py-2 hidden md:block text-white md:h-16' src={'https://i.ibb.co/vzfGJCz/GEDGETS-SHOP.png'} alt="" />
 
                 <div className='-order-1 lg:order-none'>
                     <div>
