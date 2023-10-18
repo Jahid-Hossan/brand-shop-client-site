@@ -1,0 +1,30 @@
+[
+    {
+        "brand_name": "Xiaomi",
+        "img": "https://i.ibb.co/99yHR9C/xaiomi.png"
+    },
+    {
+        "brand_name": "Google",
+        "img": "https://i.ibb.co/x3ZnJ6G/google.png"
+    },
+    {
+        "brand_name": "LG",
+        "img": "https://i.ibb.co/GxXKWxD/lg.png"
+    },
+    {
+        "brand_name": "Lenovo",
+        "img": "https://i.ibb.co/Yp8Y6zX/lenovo.png"
+    },
+    {
+        "brand_name": "Huawei",
+        "img": "https://i.ibb.co/R2C92pm/huawei.png"
+    },
+    {
+        "brand_name": "Samsung",
+        "img": "https://i.ibb.co/ngmnS3N/samsung.png"
+    },
+    {
+        "brand_name": "Apple",
+        "img": "https://i.ibb.co/vdMjZMC/apple.png"
+    }
+]
