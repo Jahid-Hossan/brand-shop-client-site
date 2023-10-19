@@ -9,6 +9,7 @@ import ContactUs from './../Pages/ContactUs/ContactUs';
 import BrandProducts from "../Pages/BrandProducts/BrandProducts";
 import Details from "../Pages/Details/Details";
 import Register from "../Pages/Register/Register";
+import PrivetRouter from "../PrivetRouter/PrivetRouter";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
                 loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
             }, {
                 path: '/brand/:name',
-                element: <BrandProducts></BrandProducts>,
+                element: <PrivetRouter><BrandProducts></BrandProducts></PrivetRouter>,
                 loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
             }, {
                 path: '/details/:id',
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
                 element: <Shop></Shop>
             }, {
                 path: '/addProduct',
-                element: <AddProduct></AddProduct>,
+                element: <PrivetRouter><AddProduct></AddProduct></PrivetRouter>,
 
             }, {
                 path: '/cart',
-                element: <MyCart></MyCart>
+                element: <PrivetRouter><MyCart></MyCart></PrivetRouter>
             }, {
                 path: '/contact',
                 element: <ContactUs></ContactUs>
