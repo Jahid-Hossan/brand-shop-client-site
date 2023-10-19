@@ -36,30 +36,32 @@ const BrandProducts = () => {
                                     <AiOutlineShoppingCart />
                                 </button>
                             </figure>
-                            <p className='bg-gray-400 text-sm w-fit rounded-tr-md rounded-bl-md px-2'>{product.category}</p>
+
                             <div className=" items-center text-left space-y-2">
                                 <h2 className="font-semibold text-xl">{product.name}</h2>
+                                <div className='flex gap-5'>
+                                    <p className=' border-[1px]  text-xs text-purple-300 w-fit rounded-tr-md rounded-bl-md px-2'>{product.category}</p>
+                                    <p className=' border-[1px]  text-xs text-purple-300 w-fit rounded-tr-md rounded-bl-md px-2'>{product.brand}</p>
+                                </div>
                                 <p className=''>{product.description}</p>
 
                                 {/* <div className="card-actions">
                                     <button className="btn btn-primary">Buy Now</button>
                                 </div> */}
                             </div>
-                            <div className='flex justify-between items-center my-4'>
-                                <p className="font-semibold my-2 text-lg">Price: <span className='text-2xl'>{product.price}</span>$</p>
+                            <div className='flex justify-between items-center my-2'>
+                                <p className="font-semibold my-2 text-lg">Price: <span className='text-xl'>{product.price}.00$</span></p>
 
                                 <div className=''>
-                                    <p className='flex items-center w-fit justify-end rounded-full my-0 bg-purple-500 text-white px-1 font-bold'>{product.rating}<AiFillStar /></p>
+                                    <p className='flex items-center w-fit justify-end rounded-full my-0 bg-purple-500 text-white px-1 font-semibold'>{product.rating}<AiFillStar /></p>
                                 </div>
                             </div>
-                            <div>
-                                <button>
-                                    <Link></Link>
+                            <div className='flex justify-between mb-2'>
+                                <button className='btn btn-sm bg-purple-500 text-white hover:bg-purple-300'   >
+                                    <Link to={`/details/${product._id}`}>Details</Link>
                                 </button>
-                                <button  >
-                                    <Link >
-                                        <RiDeleteBin2Line />
-                                    </Link>
+                                <button className='btn btn-sm bg-purple-500 text-white hover:bg-purple-300'  >
+                                    <Link >Update</Link>
                                 </button>
                             </div>
                         </div>

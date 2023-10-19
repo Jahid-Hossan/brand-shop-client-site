@@ -7,6 +7,7 @@ import MyCart from './../Pages/MyCart/MyCart';
 import Login from './../Pages/Login/Login';
 import ContactUs from './../Pages/ContactUs/ContactUs';
 import BrandProducts from "../Pages/BrandProducts/BrandProducts";
+import Details from "../Pages/Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
                 path: '/brand/:name',
                 element: <BrandProducts></BrandProducts>,
                 loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
+            }, {
+                path: '/details/:id',
+                element: <Details></Details>,
+                loader: ({ params }) => fetch(`https://tech-and-electronics-server-2q0uuz4tq-jahid-hossans-projects.vercel.app/products/${params.id}`)
             }, {
                 path: '/shop',
                 element: <Shop></Shop>

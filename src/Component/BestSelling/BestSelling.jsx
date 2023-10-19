@@ -1,6 +1,4 @@
 import { AiFillStar, AiOutlineShoppingCart } from 'react-icons/ai';
-import { FaEdit } from 'react-icons/fa';
-import { RiDeleteBin2Line } from 'react-icons/ri';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const BestSelling = () => {
@@ -34,18 +32,7 @@ const BestSelling = () => {
                             </div>
 
                         </div>
-                        <div>
-                            <button>
-                                <Link >
-                                    <FaEdit />
-                                </Link>
-                            </button>
-                            <button  >
-                                <Link >
-                                    <RiDeleteBin2Line />
-                                </Link>
-                            </button>
-                        </div>
+
                     </div>
                 </div>)
             }
