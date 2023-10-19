@@ -33,27 +33,29 @@ const Update = () => {
             description,
             rating)
 
-        // fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(productData)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         if (data.insertedId) {
-        //             Swal.fire({
-        //                 position: 'center',
-        //                 icon: 'success',
-        //                 title: 'Product Registered Successfully',
-        //                 showConfirmButton: false,
-        //                 timer: 1500
-        //             })
-        //             form.reset();
-        //         }
-        //     })
+        console.log(updateProduct._id)
+
+        fetch(`http://localhost:5000/products/${updateProduct._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(productData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Product updated Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    form.reset();
+                }
+            })
 
 
 
