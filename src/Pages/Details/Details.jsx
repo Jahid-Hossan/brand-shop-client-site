@@ -5,11 +5,61 @@ import { TbTruckDelivery } from 'react-icons/tb';
 import { GiReturnArrow } from 'react-icons/gi';
 import { RiSecurePaymentLine } from 'react-icons/ri';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Details = () => {
 
     const singleProduct = useLoaderData()
-    console.log(singleProduct)
+
+
+    const handleCart = () => {
+        const image = singleProduct.image;
+        const name = singleProduct.name;
+        const brand = singleProduct.brand;
+        const category = singleProduct.category;
+        const price = singleProduct.price;
+        const description = singleProduct.description;
+        const rating = singleProduct.rating;
+
+        const productData = {
+            image,
+            name,
+            brand,
+            category,
+            price,
+            description,
+            rating
+        };
+        console.log(image,
+            name,
+            brand,
+            category,
+            price,
+            description,
+            rating)
+
+        fetch('http://localhost:5000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(productData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Product Added to Cart Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
+    }
+
     return (
         <div>
             <div className='px-5 bg-base-100'>
@@ -42,7 +92,7 @@ const Details = () => {
                             <p>Free Delivery by <a className='link'>Tomorrow</a></p>
                         </div>
                         <div className='my-5'>
-                            <button type="button" className=" w-full text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Cart</button>
+                            <button onClick={handleCart} className=" w-full text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Cart</button>
                         </div>
                     </div>
                     <div className='my-3.5'>

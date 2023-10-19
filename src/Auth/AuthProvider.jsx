@@ -8,13 +8,8 @@ export const AuthContext = createContext()
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null)
-    const [allData, setAllData] = useState();
     const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        fetch('/data.json')
-            .then(res => res.json())
-            .then(data => setAllData(data))
-    }, [])
+
 
     // popup login
     const popUpGoogle = (provider) => {
@@ -57,7 +52,6 @@ const AuthProvider = ({ children }) => {
     }, [user])
 
     const data = {
-        allData,
         popUpGoogle,
         passwordSignUp,
         handleUpdateUser,
