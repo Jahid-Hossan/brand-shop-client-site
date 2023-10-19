@@ -1,6 +1,9 @@
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { SlBadge } from 'react-icons/sl';
+import { TbTruckDelivery } from 'react-icons/tb';
+import { GiReturnArrow } from 'react-icons/gi';
+import { RiSecurePaymentLine } from 'react-icons/ri';
 import { useLoaderData } from 'react-router-dom';
 
 const Details = () => {
@@ -14,7 +17,7 @@ const Details = () => {
                     <div className="hidden text-center mx-auto  md:block">
                         <img src={singleProduct.image} alt="" />
                     </div>
-                    <div className="bg-base-100 w-full">
+                    <div className="bg-base-100 w-full border-b-[1px] md:border-none">
                         <p className='text-clr text-xl md:text-2xl'>{singleProduct.brand}</p>
                         <h2 className='text-2xl md:text-3xl font-semibold mb-3'>{singleProduct.description}</h2>
                         <div className='md:hidden'>
@@ -42,18 +45,26 @@ const Details = () => {
                             <button type="button" className=" w-full text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Cart</button>
                         </div>
                     </div>
-
-                </div>
-                <div>
-                    <div>
-                        <SlBadge></SlBadge>
-                        <p>2 year warranty <a className='link link-primary' href="">Learn more</a></p>
+                    <div className='my-3.5'>
+                        <div className='flex items-center p-3.5  gap-3'>
+                            <SlBadge className='text-xl'></SlBadge>
+                            <p>2 year warranty <a className='link link-primary' href="">Learn more</a></p>
+                        </div>
+                        <div className='flex items-center border-y-[1px] p-3.5 gap-3'>
+                            <TbTruckDelivery className='text-xl'></TbTruckDelivery>
+                            <p>Free delivery on Lockers & Pickup Points <br /> <a className='link link-primary' href="">Learn more</a></p>
+                        </div>
+                        <div className='flex items-center p-3.5  border-b-[1px] gap-3'>
+                            <GiReturnArrow className='text-xl'></GiReturnArrow>
+                            <p>Enjoy hassle free returns with this offer. <br /><a className='link link-primary' href="">Learn more</a></p>
+                        </div>
+                        <div className='flex items-center p-3.5 gap-3'>
+                            <RiSecurePaymentLine className='text-2xl'></RiSecurePaymentLine>
+                            <p >Secure Shopping. <br />Your data is always protected</p>
+                        </div>
                     </div>
-                    <div>
-
-                        <p>Free delivery on Lockers & Pickup Points <a className='link link-primary' href="">Learn more</a></p>
-                    </div>
                 </div>
+
 
             </div>
             <div className='px-5 bg-base-100'>

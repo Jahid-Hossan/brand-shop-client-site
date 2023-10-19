@@ -10,6 +10,7 @@ import BrandProducts from "../Pages/BrandProducts/BrandProducts";
 import Details from "../Pages/Details/Details";
 import Register from "../Pages/Register/Register";
 import PrivetRouter from "../PrivetRouter/PrivetRouter";
+import Update from "../Pages/Update/Update";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             }, {
                 path: '/details/:id',
                 element: <Details></Details>,
+                loader: ({ params }) => fetch(`https://tech-and-electronics-server-2q0uuz4tq-jahid-hossans-projects.vercel.app/products/${params.id}`)
+            }, {
+                path: '/update/:id',
+                element: <Update></Update>,
                 loader: ({ params }) => fetch(`https://tech-and-electronics-server-2q0uuz4tq-jahid-hossans-projects.vercel.app/products/${params.id}`)
             }, {
                 path: '/shop',
