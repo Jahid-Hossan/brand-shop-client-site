@@ -1,30 +1,51 @@
 [
     {
         "brand_name": "Xiaomi",
-        "img": "https://i.ibb.co/99yHR9C/xaiomi.png"
+        "img": "https://i.ibb.co/99yHR9C/xaiomi.png",
+        "banner1": "https://i.ibb.co/pQHRrb2/samsung3.jpg",
+        "banner2": "https://i.ibb.co/gSpM2vs/pexels-tyler-lastovich-719399.jpg",
+        "banner3": "https://i.ibb.co/6DWGdmF/pexels-pixabay-270640.jpg"
     },
     {
         "brand_name": "Google",
-        "img": "https://i.ibb.co/x3ZnJ6G/google.png"
+        "img": "https://i.ibb.co/x3ZnJ6G/google.png",
+        "banner1": "https://i.ibb.co/BtmSKzJ/pexels-deden-dicky-ramdhani-9837443.jpg",
+        "banner2": "https://i.ibb.co/Sn6mhNt/pexels-ready-made-4032365.jpg",
+        "banner3": "https://i.ibb.co/wpQd92b/pexels-ready-made-4032364.jpg"
     },
     {
         "brand_name": "LG",
-        "img": "https://i.ibb.co/GxXKWxD/lg.png"
+        "img": "https://i.ibb.co/GxXKWxD/lg.png",
+        "banner1": "https://i.ibb.co/44YnSyB/apple.jpg",
+        "banner2": "https://i.ibb.co/LdgntG1/apple2.jpg",
+        "banner3": "https://i.ibb.co/HptGvDB/apple3.jpg"
     },
     {
         "brand_name": "Lenovo",
-        "img": "https://i.ibb.co/Yp8Y6zX/lenovo.png"
+        "img": "https://i.ibb.co/Yp8Y6zX/lenovo.png",
+        "banner1": "https://i.ibb.co/44YnSyB/apple.jpg",
+        "banner2": "https://i.ibb.co/LdgntG1/apple2.jpg",
+        "banner3": "https://i.ibb.co/HptGvDB/apple3.jpg"
     },
     {
         "brand_name": "Huawei",
-        "img": "https://i.ibb.co/R2C92pm/huawei.png"
+        "img": "https://i.ibb.co/R2C92pm/huawei.png",
+        "banner1": "https://i.ibb.co/44YnSyB/apple.jpg",
+        "banner2": "https://i.ibb.co/LdgntG1/apple2.jpg",
+        "banner3": "https://i.ibb.co/HptGvDB/apple3.jpg"
     },
     {
         "brand_name": "Samsung",
-        "img": "https://i.ibb.co/ngmnS3N/samsung.png"
+        "img": "https://i.ibb.co/ngmnS3N/samsung.png",
+        "banner1": "https://i.ibb.co/pQHRrb2/samsung3.jpg",
+        "banner2": "https://i.ibb.co/gSpM2vs/pexels-tyler-lastovich-719399.jpg",
+        "banner3": "https://i.ibb.co/mD3bd0/samsung.jpg"
     },
     {
         "brand_name": "Apple",
-        "img": "https://i.ibb.co/vdMjZMC/apple.png"
+        "img": "https://i.ibb.co/vdMjZMC/apple.png",
+        "banner1": "https://i.ibb.co/44YnSyB/apple.jpg",
+        "banner2": "https://i.ibb.co/LdgntG1/apple2.jpg",
+        "banner3": "https://i.ibb.co/HptGvDB/apple3.jpg"
     }
 ]

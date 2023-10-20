@@ -16,14 +16,7 @@ const BrandProducts = () => {
         setBrandData(filteredData)
     }, [])
 
-    // if (!brandData.length) {
-    //     console.log(brandData)
 
-    //     return <div className='text-center my-[40vh]'>
-    //         <h2 className='text-4xl font-extrabold'>Oops!!</h2>
-    //         <p className='text-2xl font-bold'>Product is not available</p>
-    //     </div>
-    // }
 
     return (
         <div>
@@ -37,7 +30,7 @@ const BrandProducts = () => {
                     :
                     <div>
                         <div>
-                            <SliderHome2></SliderHome2>
+                            <SliderHome2 category={category}></SliderHome2>
                         </div>
                         <div className='text-center my-5 py-5 rounded-sm bg-base-100'>
                             <h2 className=' text-2xl text-center md:text-4xl font-extrabold '>Choose your favorite {category.name} product</h2>
