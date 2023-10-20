@@ -2,7 +2,9 @@ import React from 'react';
 import SliderHome from '../../Component/SliderHome/SliderHome';
 import ShopByBrand from '../../Component/ShopByBrand/ShopByBrand';
 import BestSelling from '../../Component/BestSelling/BestSelling';
-import { useParams } from 'react-router-dom';
+import Computer from '../../Component/Computer/Computer';
+import Mobile from '../../Component/Mobile/Mobile';
+import Accessories from '../../Component/Accessories/Accessories';
 
 const Home = () => {
 
@@ -10,8 +12,10 @@ const Home = () => {
         <div className='container mx-auto'>
             <SliderHome />
             <ShopByBrand />
-            <h2 className='text-2xl font-bold mt-10 mb-5 px-2 bg-base-100 py-5 rounded-sm'>Recommended for you</h2>
             <BestSelling />
+            <Computer />
+            <Mobile></Mobile>
+            <Accessories></Accessories>
         </div>
     );
 };

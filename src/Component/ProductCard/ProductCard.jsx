@@ -1,9 +1,44 @@
 import { AiFillStar } from "react-icons/ai";
 import { ImBin } from "react-icons/im";
+import Swal from "sweetalert2";
 
 const ProductCard = ({ product, products, setProducts }) => {
+
+    const handleDelete = _id => {
+        console.log(_id);
+        Swal.fire({
+            title: 'Are you sure?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://tech-and-electronics-server-l9r2dl9p0-jahid-hossans-projects.vercel.app/cart/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+
+                                'Your product has been deleted successfully.',
+
+                            )
+                            const remaining = products.filter(product => product._id !== _id);
+                            setProducts(remaining);
+                        }
+                    })
+            }
+        })
+    }
+
+
+
     return (
-        <div className="flex items-center bg-base-100 rounded-lg ms:items-start ">
+        <div className="flex items-center shadow-lg rounded-lg ms:items-start ">
             <figure><img className="rounded-lg" src={product.image} alt="Movie" /></figure>
 
 
@@ -28,7 +63,7 @@ const ProductCard = ({ product, products, setProducts }) => {
 
                     <div className="">
                         {/* <ImBin className=""></ImBin> */}
-                        <button className="flex items-center">
+                        <button onClick={() => handleDelete(product._id)} className="flex items-center">
                             <ImBin className=""></ImBin>
                             <span>Remove</span>
                         </button>

@@ -13,12 +13,18 @@ const Header = () => {
     console.log(user)
 
 
+    const [theme, setTheme] = useState("light");
 
+    const toggleTheme = () => {
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        document.documentElement.setAttribute("data-theme", newTheme);
+    };
 
 
 
     return (
-        <section className='sticky top-0 z-10 bg-purple-500 '>
+        <section className='sticky top-0 z-10 bg-purple-500 data-theme={theme} '>
             <nav className='flex container mx-auto  px-5 top-0 lg:flex-row justify-between items-center'>
 
 
@@ -37,9 +43,9 @@ const Header = () => {
                         <li className='text-white' ><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         } to="/" >Home</NavLink></li>
-                        <li className='text-white' ><NavLink className={({ isActive, isPending }) =>
+                        {/* <li className='text-white' ><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
-                        } to='/shop'  >Shop</NavLink></li>
+                        } to='/shop'  >Shop</NavLink></li> */}
                         <li className='text-white' ><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         } to="/addProduct"  >Add Product</NavLink></li>
@@ -53,6 +59,9 @@ const Header = () => {
                     </ul>
 
                 </div>
+                <button onClick={toggleTheme} className="btn btn-sm btn-accent normal-case">
+                    {theme === "light" ? "Dark Theme" : "Light Theme"}
+                </button>
 
 
                 {/* <button className='py-4 '><NavLink className='px-4 hover:bg-white hover:text-black text-white font-medium md:font-semibold hover:duration-500 border-2 rounded-full py-0.5 md:py-2' to="/login"  >Log in</NavLink></button> */}
@@ -61,24 +70,7 @@ const Header = () => {
 
                     {
                         user ?
-                            // <div className="flex-none">
-                            //     <ul className="menu-horizontal">
-                            //         <li>
-                            //             <details className=''>
-                            //                 <summary className='list-none'>
-                            //                     <div className="w-10 md:w-11 mask mask-circle">
-                            //                         <img src={user?.photoURL} />
-                            //                         {/* <h2>user.displayName</h2> */}
-                            //                     </div>
-                            //                 </summary>
-                            //                 <ul className="py-2  px-4 bg-pink-500 space-y-5 right-3">
-                            //                     <li className='text-white text-lg font-semibold'><a>{user?.displayName}</a></li>
-                            //                     <li><button onClick={logOut} className=' w-full px-4 hover:bg-white hover:text-black text-white font-medium md:font-semibold hover:duration-500 border-2 rounded-full py-1'><NavLink to="/login"  >Log Out</NavLink></button></li>
-                            //                 </ul>
-                            //             </details>
-                            //         </li>
-                            //     </ul>
-                            // </div>
+
                             <div className="flex gap-2 items-center">
                                 <div className="w-10 md:w-11 mask mask-circle">
                                     <img src={user.photoURL} />

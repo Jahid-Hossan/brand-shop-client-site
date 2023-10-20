@@ -38,7 +38,7 @@ const Details = () => {
             description,
             rating)
 
-        fetch('http://localhost:5000/cart', {
+        fetch('https://tech-and-electronics-server-l9r2dl9p0-jahid-hossans-projects.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

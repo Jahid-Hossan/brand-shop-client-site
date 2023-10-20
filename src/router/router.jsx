@@ -11,11 +11,13 @@ import Details from "../Pages/Details/Details";
 import Register from "../Pages/Register/Register";
 import PrivetRouter from "../PrivetRouter/PrivetRouter";
 import Update from "../Pages/Update/Update";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
             }, {
                 path: '/cart',
                 element: <PrivetRouter><MyCart></MyCart></PrivetRouter>,
-                loader: () => fetch('http://localhost:5000/cart')
+                loader: () => fetch('https://tech-and-electronics-server-l9r2dl9p0-jahid-hossans-projects.vercel.app/cart')
             }, {
                 path: '/contact',
                 element: <ContactUs></ContactUs>

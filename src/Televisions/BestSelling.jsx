@@ -31,10 +31,10 @@ const BestSelling = () => {
                                     <AiOutlineShoppingCart />
                                 </button>
                             </figure>
-                            <p className='text-clr text-xs  rounded-tr-md rounded-bl-md '>{product.brand}</p>
+                            <p className='bg-gray-400 text-sm w-fit rounded-tr-md rounded-bl-md px-2'>{product.category}</p>
                             <div className=" items-center text-left space-y-2">
                                 <h2 className="font-semibold text-xl">{product.name}</h2>
-                                <p className='h-[78px] overflow-hidden'>{product.description}</p>
+                                <p className=''>{product.description}</p>
 
                                 {/* <div className="card-actions">
                                 <button className="btn btn-primary">Buy Now</button>
@@ -43,7 +43,7 @@ const BestSelling = () => {
                             <div className='flex justify-between items-center my-4'>
                                 <p className="font-semibold my-2 text-lg">Price: <span className='text-2xl'>{product.price}</span>$</p>
                                 <div className=''>
-                                    <p className='flex md:my-1 items-center w-fit py-0.5 rounded-full text-xs bg-purple-500 text-white px-1.5 '>{product.rating}<AiFillStar /></p>
+                                    <p className='flex items-center w-fit justify-end rounded-full my-0 bg-purple-500 text-white px-1 font-bold'>{product.rating}<AiFillStar /></p>
                                 </div>
 
                             </div>

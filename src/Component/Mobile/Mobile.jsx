@@ -2,22 +2,26 @@ import { useEffect, useState } from 'react';
 import { AiFillStar, AiOutlineShoppingCart } from 'react-icons/ai';
 import { Link, useLoaderData } from 'react-router-dom';
 
-const BestSelling = () => {
+const Mobile = () => {
     const [allProducts, setAllProducts] = useState([])
     const products = useLoaderData()
 
     useEffect(() => {
-        if (products.length > 4) {
-            const sliced = products.slice(0, 4)
+        const mobiles = products.filter(prod => prod.category.toLocaleLowerCase() === "Mobiles".toLocaleLowerCase())
+        console.log(mobiles)
+        if (mobiles.length > 4) {
+            const sliced = mobiles.slice(0, 4)
             setAllProducts(sliced)
+        } else {
+            setAllProducts(mobiles)
         }
     }, [])
-    console.log(products)
+    // console.log(products)
 
     return (
-        <div>
+        <div style={{ display: allProducts.length > 0 ? 'block' : 'none' }}>
             <div>
-                <h2 className='text-2xl font-bold mt-10  px-2 bg-base-100  rounded-sm'>Recommended for you</h2>
+                <h2 className='text-2xl font-bold mt-10  px-2 bg-base-100  rounded-sm'>Mobiles</h2>
 
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
@@ -56,4 +60,4 @@ const BestSelling = () => {
     );
 };
 
-export default BestSelling;
+export default Mobile;

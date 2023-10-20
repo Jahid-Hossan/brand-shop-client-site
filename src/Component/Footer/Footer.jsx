@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+            <footer className="p-4 mt-10 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
                 <div className="mx-auto max-w-screen-xl text-center">
                     <a href="#" className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
                         <img className='mx-auto w-40' src={"https://i.ibb.co/F0J9qym/black-removebg-preview-1.png"} alt="" />
