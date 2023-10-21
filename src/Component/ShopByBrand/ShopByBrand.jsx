@@ -33,7 +33,7 @@ const ShopByBrand = () => {
                 <h2 className=' text-2xl text-center md:text-4xl font-extrabold '>Brand Favorite</h2>
                 <p className='py-2'>Choose your favorite brand</p>
             </div>
-            <div className='bg-base-100 px-5'>
+            <div className='bg-base-100 '>
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={20}
@@ -56,8 +56,8 @@ const ShopByBrand = () => {
 
             </div>
             <div className='lg:hidden'>
-                <button className=' btn-circle bottom-10 left-0 absolute'><BsArrowLeftCircle /></button>
-                <button className=' btn-circle bottom-10 -right-8 absolute'><BsArrowRightCircle /></button>
+                <button className='bg-white btn-circle btn-xs bottom-10 left-0 absolute'><BsArrowLeftCircle /></button>
+                <button className='bg-white btn-xs z-10 btn-circle bottom-10 right-0 absolute'><BsArrowRightCircle /></button>
             </div>
         </div>
     );

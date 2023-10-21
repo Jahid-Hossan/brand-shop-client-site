@@ -26,8 +26,7 @@ const Mobile = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                 {
-                    allProducts.map(product => <div
-                        key={product._id}>
+                    allProducts.map(product => <Link to={`/details/${product._id}`} key={product._id}> <div >
                         <div className="card px-5  shadow-lg">
                             <figure className="px-10 pt-10 relative">
                                 <img src={product.image} alt="Shoes" className="rounded-xl" />
@@ -53,7 +52,8 @@ const Mobile = () => {
                             </div>
 
                         </div>
-                    </div>)
+                    </div>
+                    </Link>)
                 }
             </div>
         </div>

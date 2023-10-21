@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
             }, {
                 path: '/brand/:name',
-                element: <PrivetRouter><BrandProducts></BrandProducts></PrivetRouter>,
+                element: <BrandProducts></BrandProducts>,
                 loader: () => fetch('https://tech-and-electronics-server-8bwqbmttk-jahid-hossans-projects.vercel.app/products')
             }, {
                 path: '/details/:id',
