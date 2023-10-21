@@ -56,8 +56,8 @@ const ShopByBrand = () => {
 
             </div>
             <div className='lg:hidden'>
-                <button className='bg-white btn-circle btn-xs bottom-10 left-0 absolute'><BsArrowLeftCircle /></button>
-                <button className='bg-white btn-xs z-10 btn-circle bottom-10 right-0 absolute'><BsArrowRightCircle /></button>
+                <button className='text-center btn-circle  btn-xs bottom-10 left-0 absolute'><BsArrowLeftCircle /></button>
+                <button className='text-center btn-xs z-10 btn-circle bottom-10 right-0 absolute'><BsArrowRightCircle /></button>
             </div>
         </div>
     );

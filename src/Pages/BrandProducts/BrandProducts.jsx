@@ -67,10 +67,10 @@ const BrandProducts = () => {
                                             </div>
                                         </div>
                                         <div className='flex justify-between mb-2'>
-                                            <button className='btn btn-sm bg-purple-500 text-white hover:bg-purple-300'   >
+                                            <button className='btn btn-sm  bg-purple-500 text-white hover:bg-purple-300'   >
                                                 <Link to={`/details/${product._id}`}>Details</Link>
                                             </button>
-                                            <button className='btn btn-sm bg-purple-500 text-white hover:bg-purple-300'  >
+                                            <button className='btn btn-sm  bg-purple-500 text-white hover:bg-purple-300'  >
                                                 <Link to={`/update/${product._id}`}>Update</Link>
                                             </button>
                                         </div>
